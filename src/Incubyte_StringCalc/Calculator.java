@@ -1,6 +1,7 @@
 package Incubyte_StringCalc;
 
 public class Calculator {
+	public static int counter =0;
 	//Add Function
 		public static int addition(String content){
 			
@@ -17,6 +18,7 @@ public class Calculator {
 					content = content.substring(4);
 				}
 				String NumLine[] = Seperate_numericals(content, delimiters + "|\n");
+				counter++;
 				return Tally_Num(NumLine);
 			}
 		}
@@ -56,5 +58,8 @@ public class Calculator {
 				throw new IllegalArgumentException("Negatives not allowed: " + Negate_String);
 			}
 			return aggregate;//aggregate means total of number. 
+		}
+		public static int GetCallCount() {
+			return counter;
 		}
 }

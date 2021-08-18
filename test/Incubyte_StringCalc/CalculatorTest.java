@@ -55,4 +55,8 @@ public class CalculatorTest {
     public void testOtherDelimiter(){
     	assertEquals(3, Calculator.addition("//;\n1;2"));
     }
+    @Test
+    public void CallCount(){
+    	System.out.println("Add Function called:- "+Calculator.GetCallCount()+" times");
+    }
 }
